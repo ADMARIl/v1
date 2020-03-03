@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rubik's Cube Solver</title>
+    <script type="text/javascript" src="util.js"></script>
+    <script type="text/javascript" src="solve.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body onload="updateDisplay()">
+  <center><h1>Rubix Cube Solver</h1></center>
+    <table>
+      <tr>
+        <td>
+          <table id="cube">
+            <tr>
+              <td colspan="3" rowspan="3"></td>
+              <td id="square_9" class="red"></td>
+              <td id="square_10" class="red"></td>
+              <td id="square_11" class="red"></td>
+              <td colspan="3" rowspan="3"></td>
+              <td colspan="3" rowspan="3"></td>
+            </tr>
+            <tr>
+              <td id="square_12" class="red"></td>
+              <td id="square_13" class="red"></td>
+              <td id="square_14" class="red"></td>
+            </tr>
+            <tr>
+              <td id="square_15" class="red"></td>
+              <td id="square_16" class="red"></td>
+              <td id="square_17" class="red"></td>
+            </tr>
+            <tr>
+              <td id="square_18" class="blue"></td>
+              <td id="square_19" class="blue"></td>
+              <td id="square_20" class="blue"></td>
+              <td id="square_0" class="white"></td>
+              <td id="square_1" class="white"></td>
+              <td id="square_2" class="white"></td>
+              <td id="square_27" class="green"></td>
+              <td id="square_28" class="green"></td>
+              <td id="square_29" class="green"></td>
+              <td id="square_36" class="yellow"></td>
+              <td id="square_37" class="yellow"></td>
+              <td id="square_38" class="yellow"></td>
+            </tr>
+            <tr>
+              <td id="square_21" class="blue"></td>
+              <td id="square_22" class="blue"></td>
+              <td id="square_23" class="blue"></td>
+              <td id="square_3" class="white"></td>
+              <td id="square_4" class="white"></td>
+              <td id="square_5" class="white"></td>
+              <td id="square_30" class="green"></td>
+              <td id="square_31" class="green"></td>
+              <td id="square_32" class="green"></td>
+              <td id="square_39" class="yellow"></td>
+              <td id="square_40" class="yellow"></td>
+              <td id="square_41" class="yellow"></td>
+            </tr>
+            <tr>
+              <td id="square_24" class="blue"></td>
+              <td id="square_25" class="blue"></td>
+              <td id="square_26" class="blue"></td>
+              <td id="square_6" class="white"></td>
+              <td id="square_7" class="white"></td>
+              <td id="square_8" class="white"></td>
+              <td id="square_33" class="green"></td>
+              <td id="square_34" class="green"></td>
+              <td id="square_35" class="green"></td>
+              <td id="square_42" class="yellow"></td>
+              <td id="square_43" class="yellow"></td>
+              <td id="square_44" class="yellow"></td>
+            </tr>
+            <tr>
+              <td colspan="3" rowspan="3"></td>
+              <td id="square_45" class="orange"></td>
+              <td id="square_46" class="orange"></td>
+              <td id="square_47" class="orange"></td>
+              <td colspan="3" rowspan="3"></td>
+              <td colspan="3" rowspan="3"></td>
+            </tr>
+            <tr>
+              <td id="square_48" class="orange"></td>
+              <td id="square_49" class="orange"></td>
+              <td id="square_50" class="orange"></td>
+            </tr>
+            <tr>
+              <td id="square_51" class="orange"></td>
+              <td id="square_52" class="orange"></td>
+              <td id="square_53" class="orange"></td>
+            </tr>
+          </table>
+        </td>
+        <td valign="top" style="padding-left: 12px;">
+          <span class="move" onclick="turn(U);">U</span>
+          <span class="move" onclick="turn(D);">D</span>
+          <span class="move" onclick="turn(L);">L</span>
+          <span class="move" onclick="turn(R);">R</span>
+          <span class="move" onclick="turn(F);">F</span>
+          <span class="move" onclick="turn(B);">B</span><br />
+          <span class="move inv" onclick="turn(Ui);">U'</span>
+          <span class="move inv" onclick="turn(Di);">D'</span>
+          <span class="move inv" onclick="turn(Li);">L'</span>
+          <span class="move inv" onclick="turn(Ri);">R'</span>
+          <span class="move inv" onclick="turn(Fi);">F'</span>
+          <span class="move inv" onclick="turn(Bi);">B'</span><br />
+          <span class="move" onclick="turn(M);">M</span>
+          <span class="move" onclick="turn(E);">E</span>
+          <span class="move" onclick="turn(S);">S</span>
+          <span class="move inv" onclick="turn(Mi);">M'</span>
+          <span class="move inv" onclick="turn(Ei);">E'</span>
+          <span class="move inv" onclick="turn(Si);">S'</span><br />
+          <span class="move" onclick="turn(X);">X</span>
+          <span class="move" onclick="turn(Y);">Y</span>
+          <span class="move" onclick="turn(Z);">Z</span>
+          <span class="move inv" onclick="turn(Xi);">X'</span>
+          <span class="move inv" onclick="turn(Yi);">Y'</span>
+          <span class="move inv" onclick="turn(Zi);">Z'</span><br />
+          <span class="solvebutton" onclick="solve()">SOLVE!</span>
+        </td>
+      </tr>
+    </table>
+    <div id="solve_steps">
+      
+    </div>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76848038-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

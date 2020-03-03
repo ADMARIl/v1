@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "misc"
+AuthUserFile "/home/apati/.htpasswds/public_html/misc/passwd"
+require valid-user

@@ -1,0 +1,175 @@
+* {
+  font-family: sans-serif;
+}
+
+.unselectable {
+  user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+body {
+  /*background-image: url('images/bg.jpg');
+  background-size: cover;*/
+}
+
+img#alto {
+  position: absolute;
+  top: 44px;
+  left: 115px;
+  cursor: pointer;
+}
+
+div#content {
+  margin: 0 auto;
+  width: 950px;
+  position: relative;
+  overflow-y: visible;
+  padding: 12px;
+}
+
+div#content > h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+div#navigation {
+  width: 200px;
+  padding: 12px;
+}
+
+div#navigation > a {
+  display: block;
+  margin: 4px;
+  padding: 16px 4px;
+  padding-left: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #dddddd;
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: 2px;
+  transition: padding-left 400ms, background-color 400ms, color 400ms;
+}
+
+div#navigation > a:hover {
+  color: #ffffff;
+  padding-left: 28px;
+}
+
+div#navigation > a.current {
+  color: #ff3333;
+  padding-left: 28px;
+}
+
+map#viola > area {
+  outline: none !important;
+}
+
+div#joke {
+  width: 450px;
+  height: 300px;
+  background-color: #444444;
+  color: #dddddd;
+  padding: 36px;
+  margin-left: 52px;
+}
+
+div#joke > span#joke_content {
+  font-size: 25px;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+
+div#joke > span#new_joke {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #999999;
+  padding: 6px 12px;
+  border-radius: 2px;
+  position: absolute;
+  left: 84px;
+  bottom: 32px;
+  cursor: pointer;
+  transition: background-color 300ms;
+}
+
+div#joke > span#new_joke:hover {
+  background-color: #aaaaaa;
+}
+
+div#joke > span#new_joke:active {
+  background-color: #777777;
+}
+
+div#works, div#violists {
+  margin-top: 36px;
+}
+
+div#works {
+  width: 500px;
+}
+
+div#works > div.work{
+  margin-top: 24px;
+}
+
+div#works > div.work > span.work_name {
+  display: block;
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-bottom: 8px;
+}
+
+span.audio {
+  display: none;
+}
+
+table#violists td.name {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding-top: 18px;
+  padding-bottom: 8px;
+}
+
+table#violists td {
+  vertical-align: top;
+}
+
+table#violists td.bio {
+  padding-left: 12px;
+}
+
+div#partPopup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto auto;
+  width: 900px;
+  height: 70%;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 4px 30px -8px black;
+  padding: 18px;
+  display: none;
+}
+
+frame#frame_header {
+  background-image: url('images/bg.jpg');
+  background-position: 0 0;
+}
+
+frame#frame_nav {
+  background-image: url('images/bg.jpg');
+  background-position: 0 -100px;
+}
+
+frame#frame_main {
+  background-image: url('images/bg.jpg');
+  background-position: -240px -100px;
+}
+

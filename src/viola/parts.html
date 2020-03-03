@@ -1,0 +1,58 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <title>Everything About Violas</title>
+  </head>
+  <body>
+    <div id="content">
+      <h1>The Parts of a Viola</h1>
+      <p>
+        To learn about the various parts of a viola, hover over the image and click on any part that becomes hilighted
+      </p>
+      <div style="text-align: center">
+        <img src="images/viola shades/viola.png" width="700" height="469" alt="Viola" usemap="#viola" id="viola_img" />
+      </div>
+      
+      <map name="viola" id="viola">
+        <area shape="poly" coords="0,293, 3,299, 39,289, 44,300, 48,305, 131,266, 134,261, 140,254, 145,248, 151,248, 156,250, 167,241, 186,232, 208,226, 220,225, 266,202, 313,180, 352,161, 397,140, 453,113, 516,84, 556,66, 615,38, 658,18, 663,13, 663,10, 670,6, 664,6, 653,0, 648,0, 621,15, 563,47, 502,78, 446,104, 395,127, 344,150, 291,173, 227,200, 158,229, 81,260" href="javascript:void(0)" onclick="partInfo('BOW'); return false;" alt="bow" title="bow" />
+        <area shape="poly" coords="147,247,171,260,184,274,191,287,192,298,189,318,182,329,168,343,156,352,156,357,170,385,176,394,176,403,175,409,166,414,149,389,132,355,123,327,121,308,124,286,135,264,138,257" href="javascript:void(0)" onclick="partInfo('CHINREST'); return false;" alt="chinrest" title="chinrest" />
+        <area shape="poly" coords="304,270,304,246,316,261,326,278,334,295,334,305,329,308,315,282" href="javascript:void(0)" onclick="partInfo('BRIDGE'); return false;" alt="bridge" title="bridge" />
+        <area shape="poly" coords="361,227,619,117,635,137,388,271" href="javascript:void(0)" onclick="partInfo('FINGERBOARD'); return false;" alt="fingerboard" title="fingerboard" />
+        <area shape="poly" coords="320,366,323,362,329,362,330,367,327,371,319,372,310,364,309,357,311,348,318,340,326,334,341,325,358,316,366,308,368,299,363,297,358,300,355,298,355,295,358,293,364,293,370,297,371,306,365,316,354,326,327,342,316,351,312,363" href="javascript:void(0)" onclick="partInfo('F-HOLES'); return false;" alt="fholes" title="f-hole" />
+        <area shape="poly" coords="254,250,259,249,262,247,262,244,258,242,250,246,250,257,255,261,266,262,273,262,295,253,317,242,323,241,334,242,333,247,328,248,327,252,332,251,336,248,337,241,332,238,319,238,308,241,271,257,261,258,253,257" href="javascript:void(0)" onclick="partInfo('F-HOLES'); return false;" alt="fholes" title="f-hole" />
+        <area shape="poly" coords="158,360,166,377,187,364,205,355,225,349,242,345,255,341,270,334,249,291,236,300,229,306,227,304,223,304,221,308,223,311,208,328,196,337,179,348" href="javascript:void(0)" onclick="partInfo('TAILPIECE'); return false;" alt="tailpiece" title="tailpiece" />
+        <area shape="poly" coords="639,112,633,102,633,99,621,88,614,94,622,104,623,108,625,109,630,114" href="javascript:void(0)" onclick="partInfo('TUNING PEGS'); return false;" alt="tuningpegs" title="tuning pegs" />
+        <area shape="poly" coords="622,117,614,106,613,103,608,100,601,91,595,95,603,105,604,111,607,111,614,119,619,116" href="javascript:void(0)" onclick="partInfo('TUNING PEGS'); return false;" alt="tuningpegs" title="tuning pegs" />
+        <area shape="poly" coords="644,140,656,155,656,158,658,159,656,163,657,165,667,174,672,174,677,170,684,169,687,165,689,160,687,153,683,149,676,151,673,147,672,147,663,135,657,138,666,151,666,153,663,150,662,150,651,135" href="javascript:void(0)" onclick="partInfo('TUNING PEGS'); return false;" alt="tuningpegs" title="tuning pegs" />
+        <area shape="poly" coords="657,112,664,105,661,101,665,96,669,93,672,96,679,95,680,96,686,95,690,94,698,103,698,107,696,111,690,120,694,125,686,133,680,129,671,129" href="javascript:void(0)" onclick="partInfo('SCROLL'); return false;" alt="scroll" title="scroll" />
+      </map>
+    </div>
+    <div id="partPopup">
+      <table width="100%">
+        <tr>
+          <td id='partname' style='font-size: 1.7em; font-weight: bold; color: white; background-color: #772200; padding: 8px; text-align: center;' colspan='2'>
+            
+          </td>
+        </tr>
+        <tr>
+          <td style='padding: 18px;'>
+            <img id='partimage' src='images/viola.png' alt='bow' height="170" />
+          </td>
+          <td style='padding: 18px; vertical-align: top; font-size: 1.2em;' id='parttext1'>
+          </td>
+        </tr>
+        <tr>
+          <td colspan='2' style='padding: 18px; vertical-align: top; font-size: 1.1em;' id='parttext2'>
+          </td>
+        </tr>
+      </table>
+      <img id='exit' src='images/exit.png' alt='X' style='position: absolute; top: -20px; right: -20px; width: 40px; height: 40px; cursor: pointer;' onclick='closeInfo();' />
+    </div>
+  </body>
+</html>
