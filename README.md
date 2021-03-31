@@ -1,6 +1,6 @@
 # v1
-## *Please be advised:* This site is old and may be subject to errors.
-### For the brave, the site can be accessed [here](https://admaril.github.io/v1/src/).
+## *Please be advised:* This site is old and __*definitely*__ has errors since I couldn't find all the original files.
+###  For the brave, the site can be accessed [here](https://admaril.github.io/v1/src/).
 
 This is the source code for the first iteration of my personal website. Originally hosted at INGSON.net.
 
